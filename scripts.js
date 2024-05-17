@@ -28,7 +28,7 @@ function handleNo() {
 
 
     const character = document.getElementById('character');
-    character.src = 'angry-vegeta.png'; // URL to an angry Vegeta image
+    character.src = 'https://www.pngall.com/wp-content/uploads/15/Baki-PNG-Image-HD.png'; // URL to an angry Vegeta image
 
 
     const cupids = document.getElementById('cupids');
@@ -36,7 +36,7 @@ function handleNo() {
     for (let i = 0; i < 3; i++) {
         const antiCupid = document.createElement('div');
         antiCupid.classList.add('cupid');
-        antiCupid.style.background = 'url("anti-cupid.png") no-repeat center center / contain'; // URL to an anti-cupid image
+        antiCupid.style.background = 'url("https://www.pngall.com/wp-content/uploads/15/Baki-PNG-Images-HD.png") no-repeat center center / contain'; // URL to an anti-cupid image
         cupids.appendChild(antiCupid);
     }
 }
