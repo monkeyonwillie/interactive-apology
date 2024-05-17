@@ -19,7 +19,9 @@ const yesMessages = [
     "I'm so glad we can start over.",
     "Thank you for giving me another chance.",
     "I promise I'll do better.",
-    "This means a lot to me."
+    "This means a lot to me.",
+    "You are amazing for this.",
+    "Let's make this work together."
 ];
 
 function handleYes() {
@@ -35,14 +37,10 @@ function handleYes() {
 
 function handleNo() {
     const questionElement = document.getElementById('question');
-    const noButton = document.getElementById('no');
     noCount++;
 
     if (noCount <= questions.length) {
         questionElement.innerText = questions[noCount - 1];
-        if (noCount > 3 && noCount <= 7) {
-            noButton.style.width = `${20 - (noCount - 3) * 2}%`;
-        }
     } else {
         showScaryMessage();
     }
@@ -68,6 +66,11 @@ function explodeHearts() {
 }
 
 function showScaryMessage() {
-    document.body.innerHTML = '<p class="scary">You are going to die</p>';
-            }
-            
+    document.body.innerHTML = `
+        <div class="scary-background">
+            <img src="https://www.pngall.com/wp-content/uploads/15/Baki-PNG-Image-HD.png" alt="Scary Background">
+            <p class="scary">You are going to die</p>
+        </div>
+    `;
+}
+    
