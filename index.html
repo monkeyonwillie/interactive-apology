@@ -1,34 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Interactive Apology</title>
-    <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Apology</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="container" id="container">
-        <div class="message" id="message">
-            <img src="https://www.pngall.com/wp-content/uploads/15/Baki-PNG-Image-HD.png" alt="Baki Hanma" id="character">
-            <div class="poster">
-                <p>I'm sorry for being bad towards you. Can we start over?</p>
-            </div>
-            <div class="cupids" id="cupids"></div>
-        </div>
-        <div class="buttons">
-            <button onclick="handleYes()">Yes</button>
-            <button onclick="handleNo()">No</button>
-        </div>
-    </div>
-    <script src="scripts.js"></script>
+    <div class="container" id="container">
+        <div class="message" id="message">
+            <img src="https://www.pngall.com/wp-content/uploads/15/Baki-PNG-HD-Image.png" alt="Baki Hanma" id="character">
+            <div class="overlay">
+                <div class="poster">
+                    <p>I'm sorry for being bad towards you. Can we start over?</p>
+                </div>
+                <div class="buttons">
+                    <button class="yes" onclick="handleYes()">Yes</button>
+                    <button class="no" onclick="handleNo()">No</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="scripts.js"></script>
 </body>
 </html>
-
-
-
-
-
-
-
-
-
