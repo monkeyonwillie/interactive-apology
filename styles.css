@@ -1,0 +1,106 @@
+body {
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+
+.container {
+    text-align: center;
+    position: relative;
+}
+
+
+.message {
+    position: relative;
+    display: inline-block;
+}
+
+
+#character {
+    width: 300px;
+}
+
+
+.poster {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: white;
+    border: 2px solid black;
+    padding: 10px;
+    text-align: center;
+    font-size: 18px;
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+}
+
+
+.cupids {
+    position: absolute;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 100px;
+}
+
+
+.cupid {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background: url('cupid.png') no-repeat center center / contain;
+    animation: rotate 4s linear infinite;
+}
+
+
+.cupid:nth-child(1) { transform: rotate(0deg) translateX(50px) rotate(0deg); }
+.cupid:nth-child(2) { transform: rotate(120deg) translateX(50px) rotate(-120deg); }
+.cupid:nth-child(3) { transform: rotate(240deg) translateX(50px) rotate(-240deg); }
+
+
+@keyframes rotate {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+
+.buttons {
+    margin-top: 20px;
+}
+
+
+#container.hearts-explosion::after {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('hearts.gif') no-repeat center center / cover;
+    animation: explode 2s forwards;
+}
+
+
+@keyframes explode {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+
+#container.no .message {
+    animation: shake 0.5s;
+}
+
+
+@keyframes shake {
+    0%, 100% { transform: translateX(0); }
+    25%, 75% { transform: translateX(-10px); }
+    50% { transform: translateX(10px); }
+}
+
