@@ -1,43 +1,27 @@
 function handleYes() {
-    const container = document.getElementById('container');
-    container.classList.add('hearts-explosion');
+    const container = document.getElementById('container');
+    container.classList.add('hearts-explosion');
 
+    const character = document.getElementById('character');
+    character.src = 'https://www.pngall.com/wp-content/uploads/15/Baki-PNG-HD-Image.png'; // URL to a dancing Baki gif
 
-    const character = document.getElementById('character');
-    character.src = 'baki-dance.gif'; // URL to a dancing Baki gif
+    setTimeout(() => {
+        // Display hearts explosion
+        const heartsBackground = document.createElement('div');
+        heartsBackground.classList.add('hearts-background');
+        document.body.appendChild(heartsBackground);
 
-
-    const cupids = document.getElementById('cupids');
-    cupids.innerHTML = ''; // Remove existing cupids
-    setTimeout(() => {
-        // Add dancing cupids
-        for (let i = 0; i < 3; i++) {
-            const cupid = document.createElement('div');
-            cupid.classList.add('cupid');
-            cupid.style.animation = 'none'; // Stop rotating animation
-            cupid.style.background = 'url("dancing-cupid.gif") no-repeat center center / contain'; // URL to a dancing cupid gif
-            cupids.appendChild(cupid);
-        }
-    }, 2000); // Delay to show the heart explosion first
+        for (let i = 0; i < 100; i++) {
+            const heart = document.createElement('div');
+            heart.classList.add('heart');
+            heart.style.left = `${Math.random() * 100}vw`;
+            heart.style.animationDelay = `${Math.random() * 10}s`;
+            heartsBackground.appendChild(heart);
+        }
+    }, 2000); // Delay to show the heart explosion first
 }
-
 
 function handleNo() {
-    const container = document.getElementById('container');
-    container.classList.add('no');
-
-
-    const character = document.getElementById('character');
-    character.src = 'https://www.pngall.com/wp-content/uploads/15/Baki-PNG-Image-HD.png'; // URL to an angry Vegeta image
-
-
-    const cupids = document.getElementById('cupids');
-    cupids.innerHTML = ''; // Remove existing cupids
-    for (let i = 0; i < 3; i++) {
-        const antiCupid = document.createElement('div');
-        antiCupid.classList.add('cupid');
-        antiCupid.style.background = 'url("https://www.pngall.com/wp-content/uploads/15/Baki-PNG-Images-HD.png") no-repeat center center / contain'; // URL to an anti-cupid image
-        cupids.appendChild(antiCupid);
-    }
-}
-
+    const character = document.getElementById('character');
+    character.src = 'https://www.pngall.com/wp-content/uploads/15/Baki-PNG-Image-HD.png'; // Angry Vegeta image
+                                              }
