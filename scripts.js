@@ -16,8 +16,6 @@ document.addEventListener('DOMContentLoaded', () => {
     ];
 
     const yesMessages = [
-        "My heart is ever at your service. - Shakespeare",
-        "I love thee with a love that shall not die. - Shakespeare",
         "Your kindness is like a balm to my weary soul.",
         "In your eyes, I find my peace and my home.",
         "Your love is the light that guides me through the darkness.",
@@ -58,7 +56,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         if (noCount <= questions.length) {
             questionElement.innerText = questions[noCount - 1];
-            if (noCount === questions.length) {
+            if (noCount === 2) {
                 characterImage.src = 'https://www.pngall.com/wp-content/uploads/14/Frieza-PNG-Cutout.png';
                 characterImage.classList.add('shake');
             }
@@ -92,3 +90,4 @@ document.addEventListener('DOMContentLoaded', () => {
         `;
     }
 });
+        
