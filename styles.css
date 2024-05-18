@@ -12,6 +12,7 @@ body {
 .container {
     text-align: center;
     position: relative;
+    overflow: hidden;
 }
 
 .message {
@@ -92,7 +93,7 @@ button.no {
 }
 
 #container.no .message img {
-    content: url('https://www.pngall.com/wp-content/uploads/15/Baki-PNG-Image-HD.png'); /* Angry Vegeta image */
+    content: url('images/angry_vegeta.png'); /* Angry Vegeta image */
     animation: shake 0.5s;
 }
 
@@ -156,10 +157,27 @@ button.no {
     color: #333;
 }
 
-.heartfelt {
-    font-family: 'Cursive', serif;
-    font-size: 32px;
-    color: #ff69b4; /* Choose a heartfelt color */
-    margin-top: 20px;
-    text-align: center;
-    }
+.cupid {
+    position: absolute;
+    width: 50px;
+}
+
+.cupid.top-left {
+    top: 10px;
+    left: 10px;
+}
+
+.cupid.top-right {
+    top: 10px;
+    right: 10px;
+}
+
+.cupid.bottom-left {
+    bottom: 10px;
+    left: 10px;
+}
+
+.cupid.bottom-right {
+    bottom: 10px;
+    right: 10px;
+}
