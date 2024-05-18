@@ -4,13 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Interactive Apology</title>
-    <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&family=Lobster&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <div class="container" id="container">
         <div class="message" id="message">
-            <img src="https://www.pngall.com/wp-content/uploads/15/Baki-PNG-Image-HD.png" alt="Baki Hanma" id="character">
+            <img src="https://www.pngall.com/wp-content/uploads/15/Baki-PNG-HD-Image.png" alt="Character" id="character">
             <div class="overlay">
                 <div class="poster">
                     <p id="question">I'm sorry for being bad towards you. Can we start over?</p>
@@ -22,6 +21,10 @@
             </div>
         </div>
     </div>
+    <audio id="background-music" loop>
+        <source src="your-music-file.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
     <script src="scripts.js"></script>
 </body>
 </html>
