@@ -16,31 +16,39 @@ document.addEventListener('DOMContentLoaded', () => {
     ];
 
     const yesMessages = [
-        "You won't regret this decision.",
-        "I'm so glad we can start over.",
-        "Thank you for giving me another chance.",
-        "I promise I'll do better.",
-        "This means a lot to me.",
-        "You are amazing for this.",
-        "Let's make this work together.",
-        "I appreciate your kindness.",
-        "Your forgiveness means the world to me.",
-        "Let's create beautiful memories together."
+        "My heart is ever at your service. - Shakespeare",
+        "I love thee with a love that shall not die. - Shakespeare",
+        "Your kindness is like a balm to my weary soul.",
+        "In your eyes, I find my peace and my home.",
+        "Your love is the light that guides me through the darkness.",
+        "With you, every moment is a beautiful memory.",
+        "You are the poetry my heart speaks.",
+        "Together, we can weather any storm.",
+        "Your forgiveness is a gift I treasure deeply.",
+        "Your smile is the dawn breaking in my soul."
     ];
 
     const questionElement = document.getElementById('question');
     const container = document.getElementById('container');
     const characterImage = document.getElementById('character');
+    const backgroundMusic = document.getElementById('background-music');
 
     document.getElementById('yes').addEventListener('click', handleYes);
     document.getElementById('no').addEventListener('click', handleNo);
 
     function handleYes() {
-        yesCount++;
+        if (!backgroundMusic.playing) {
+            backgroundMusic.play();
+            backgroundMusic.playing = true; // Custom property to track playing state
+        }
 
         if (yesCount < yesMessages.length) {
-            questionElement.innerText = yesMessages[yesCount - 1];
-        } else {
+            questionElement.innerText = yesMessages[yesCount];
+        }
+
+        yesCount++;
+
+        if (yesCount === 3) {
             explodeHearts();
         }
     }
@@ -80,4 +88,4 @@ document.addEventListener('DOMContentLoaded', () => {
         `;
     }
 });
-    
+                                                    
