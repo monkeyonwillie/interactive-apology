@@ -63,7 +63,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
 
         // Switch to Frieza image when "No" is clicked
-        characterImage.src = 'https://www.pngall.com/wp-content/uploads/14/Frieza-PNG-Free-Image.png';
+        characterImage.src = 'https://www.pngall.com/wp-content/uploads/5/Pikachu-PNG-Free-Download.png';
         characterImage.classList.add('shake');
 
         if (noCount > questions.length) {
