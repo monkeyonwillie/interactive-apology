@@ -38,8 +38,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
     function handleYes() {
         if (!backgroundMusic.playing) {
-            backgroundMusic.play();
-            backgroundMusic.playing = true; // Custom property to track playing state
+            backgroundMusic.play().catch(error => console.log(error));
+            backgroundMusic.playing = true;
         }
 
         if (yesCount < yesMessages.length) {
@@ -58,6 +58,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
         if (noCount <= questions.length) {
             questionElement.innerText = questions[noCount - 1];
+            if (noCount === questions.length) {
+                characterImage.src = 'https://www.pngall.com/wp-content/uploads/14/Frieza-PNG-Cutout.png';
+                characterImage.classList.add('shake');
+            }
         } else {
             showScaryMessage();
         }
@@ -88,4 +92,3 @@ document.addEventListener('DOMContentLoaded', () => {
         `;
     }
 });
-        
