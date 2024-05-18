@@ -5,7 +5,7 @@ body {
     align-items: center;
     height: 100vh;
     margin: 0;
-    font-family: Arial, sans-serif;
+    font-family: 'Amatic SC', cursive, 'Lobster', cursive, Arial, sans-serif;
     position: relative;
 }
 
@@ -59,11 +59,12 @@ button {
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    transition: background-color 0.3s;
+    transition: background-color 0.3s, transform 0.3s;
 }
 
 button:hover {
     background-color: #555; /* Darker background color for hover effect */
+    transform: scale(1.1);
 }
 
 button.yes {
@@ -146,4 +147,4 @@ button.no {
     margin-top: 10px;
     font-size: 18px;
     color: #333;
-                       }
+}
