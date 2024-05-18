@@ -4,7 +4,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const backgroundMusic = document.getElementById('backgroundMusic');
     backgroundMusic.volume = 0.5; // Adjust the volume (0.0 to 1.0)
-    backgroundMusic.play(); // Play the background music
 
     const questions = [
         "I'm really sorry. Please give me another chance.",
@@ -35,14 +34,13 @@ document.addEventListener('DOMContentLoaded', () => {
         "Your forgiveness is a gift I deeply value.",
         "Let's create beautiful memories from now on.",
         "You are my inspiration, my muse.",
-        "Together, we can conquer the world.",
-        "Your smile is my daily motivation.",
-        "Every moment with you is a treasure."
+        "Together, we can conquer the world."
     ];
 
     const questionElement = document.getElementById('question');
     const container = document.getElementById('container');
     const characterImage = document.getElementById('character');
+    const buttonsDiv = document.querySelector('.buttons');
 
     document.getElementById('yes').addEventListener('click', handleYes);
     document.getElementById('no').addEventListener('click', handleNo);
@@ -54,7 +52,7 @@ document.addEventListener('DOMContentLoaded', () => {
             container.classList.add('hearts-explosion');
         }
 
-        if (yesCount <= 6) {
+        if (yesCount <= 5) {
             questionElement.innerText = yesMessages[yesCount - 1];
         } else {
             displaySweetMessages();
@@ -90,4 +88,3 @@ document.addEventListener('DOMContentLoaded', () => {
         `;
     }
 });
-        
