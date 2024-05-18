@@ -22,7 +22,10 @@ document.addEventListener('DOMContentLoaded', () => {
         "I promise I'll do better.",
         "This means a lot to me.",
         "You are amazing for this.",
-        "Let's make this work together."
+        "Let's make this work together.",
+        "I appreciate your kindness.",
+        "Your forgiveness means the world to me.",
+        "Let's create beautiful memories together."
     ];
 
     const questionElement = document.getElementById('question');
@@ -35,7 +38,7 @@ document.addEventListener('DOMContentLoaded', () => {
     function handleYes() {
         yesCount++;
 
-        if (yesCount < 5) {
+        if (yesCount < yesMessages.length) {
             questionElement.innerText = yesMessages[yesCount - 1];
         } else {
             explodeHearts();
