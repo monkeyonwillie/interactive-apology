@@ -2,6 +2,10 @@ document.addEventListener('DOMContentLoaded', () => {
     let noCount = 0;
     let yesCount = 0;
 
+    const backgroundMusic = document.getElementById('backgroundMusic');
+    backgroundMusic.volume = 0.5; // Adjust the volume (0.0 to 1.0)
+    backgroundMusic.play(); // Play the background music
+
     const questions = [
         "I'm really sorry. Please give me another chance.",
         "I apologize from the bottom of my heart. Can we try again?",
@@ -16,40 +20,44 @@ document.addEventListener('DOMContentLoaded', () => {
     ];
 
     const yesMessages = [
-        "My heart is ever at your service. - Shakespeare",
-        "I love thee with a love that shall not die. - Shakespeare",
-        "Your kindness is like a balm to my weary soul.",
-        "In your eyes, I find my peace and my home.",
-        "Your love is the light that guides me through the darkness.",
-        "With you, every moment is a beautiful memory.",
-        "You are the poetry my heart speaks.",
-        "Together, we can weather any storm.",
-        "Your forgiveness is a gift I treasure deeply.",
-        "Your smile is the dawn breaking in my soul."
+        "You won't regret this decision.",
+        "I'm so glad we can start over.",
+        "Thank you for giving me another chance.",
+        "I promise I'll do better.",
+        "This means a lot to me.",
+        "You are amazing for this.",
+        "Let's make this work together."
+    ];
+
+    const sweetMessages = [
+        "Our journey together means everything to me.",
+        "I cherish every moment we spend together.",
+        "Your forgiveness is a gift I deeply value.",
+        "Let's create beautiful memories from now on.",
+        "You are my inspiration, my muse.",
+        "Together, we can conquer the world.",
+        "Your smile is my daily motivation.",
+        "Every moment with you is a treasure."
     ];
 
     const questionElement = document.getElementById('question');
     const container = document.getElementById('container');
     const characterImage = document.getElementById('character');
-    const backgroundMusic = document.getElementById('background-music');
 
     document.getElementById('yes').addEventListener('click', handleYes);
     document.getElementById('no').addEventListener('click', handleNo);
 
     function handleYes() {
-        if (!backgroundMusic.playing) {
-            backgroundMusic.play();
-            backgroundMusic.playing = true; // Custom property to track playing state
-        }
-
-        if (yesCount < yesMessages.length) {
-            questionElement.innerText = yesMessages[yesCount];
-        }
-
         yesCount++;
 
         if (yesCount === 3) {
-            explodeHearts();
+            container.classList.add('hearts-explosion');
+        }
+
+        if (yesCount <= 6) {
+            questionElement.innerText = yesMessages[yesCount - 1];
+        } else {
+            displaySweetMessages();
         }
     }
 
@@ -63,21 +71,15 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
-    function explodeHearts() {
-        container.classList.add('hearts-explosion');
-        setTimeout(() => {
-            const heartsBackground = document.createElement('div');
-            heartsBackground.classList.add('hearts-background');
-            document.body.appendChild(heartsBackground);
-
-            for (let i = 0; i < 100; i++) {
-                const heart = document.createElement('div');
-                heart.classList.add('heart');
-                heart.style.left = `${Math.random() * 100}vw`;
-                heart.style.animationDelay = `${Math.random() * 10}s`;
-                heartsBackground.appendChild(heart);
-            }
-        }, 2000);
+    function displaySweetMessages() {
+        questionElement.innerText = "Thank you for giving us a chance to make things right.";
+        
+        sweetMessages.forEach(message => {
+            const p = document.createElement('p');
+            p.innerText = message;
+            p.classList.add('sweet-message');
+            container.appendChild(p);
+        });
     }
 
     function showScaryMessage() {
@@ -88,4 +90,4 @@ document.addEventListener('DOMContentLoaded', () => {
         `;
     }
 });
-                                                    
+        
