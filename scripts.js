@@ -25,17 +25,9 @@ document.addEventListener('DOMContentLoaded', () => {
         "Let's make this work together."
     ];
 
-    const extraSweetMessages = [
-        "Our journey together means everything to me.",
-        "I cherish every moment we spend together.",
-        "Your forgiveness is a gift I deeply value.",
-        "Let's create beautiful memories from now on."
-    ];
-
     const questionElement = document.getElementById('question');
     const container = document.getElementById('container');
     const characterImage = document.getElementById('character');
-    const buttonsDiv = document.querySelector('.buttons');
 
     document.getElementById('yes').addEventListener('click', handleYes);
     document.getElementById('no').addEventListener('click', handleNo);
@@ -46,7 +38,7 @@ document.addEventListener('DOMContentLoaded', () => {
         if (yesCount < 5) {
             questionElement.innerText = yesMessages[yesCount - 1];
         } else {
-            displaySweetMessages();
+            explodeHearts();
         }
     }
 
@@ -58,15 +50,6 @@ document.addEventListener('DOMContentLoaded', () => {
         } else {
             showScaryMessage();
         }
-    }
-
-    function displaySweetMessages() {
-        extraSweetMessages.forEach(message => {
-            const p = document.createElement('p');
-            p.innerText = message;
-            p.classList.add('sweet-message');
-            container.appendChild(p);
-        });
     }
 
     function explodeHearts() {
