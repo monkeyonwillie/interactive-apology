@@ -156,28 +156,3 @@ button.no {
     font-size: 18px;
     color: #333;
 }
-
-.cupid {
-    position: absolute;
-    width: 50px;
-}
-
-.cupid.top-left {
-    top: 10px;
-    left: 10px;
-}
-
-.cupid.top-right {
-    top: 10px;
-    right: 10px;
-}
-
-.cupid.bottom-left {
-    bottom: 10px;
-    left: 10px;
-}
-
-.cupid.bottom-right {
-    bottom: 10px;
-    right: 10px;
-}
