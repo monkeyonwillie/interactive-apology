@@ -67,10 +67,6 @@ document.addEventListener('DOMContentLoaded', () => {
             p.classList.add('sweet-message');
             container.appendChild(p);
         });
-
-        // Swap Cupids
-        document.querySelector('.cupid.top-left').src = 'images/cupid3.png';
-        document.querySelector('.cupid.top-right').src = 'images/cupid4.png';
     }
 
     function explodeHearts() {
@@ -98,4 +94,4 @@ document.addEventListener('DOMContentLoaded', () => {
         `;
     }
 });
-        
+    
