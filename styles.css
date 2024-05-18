@@ -61,6 +61,10 @@ button {
     transition: background-color 0.3s;
 }
 
+button:hover {
+    background-color: #555; /* Darker background color for hover effect */
+}
+
 button.yes {
     background-color: green;
     color: white;
@@ -144,5 +148,18 @@ button.no {
     width: 100%;
     height: 100%;
     object-fit: cover;
+}
+
+.sweet-message {
+    margin-top: 10px;
+    font-size: 18px;
+    color: #333;
+}
+
+.heartfelt {
+    font-family: 'Cursive', serif;
+    font-size: 32px;
+    color: #ff69b4; /* Choose a heartfelt color */
+    margin-top: 20px;
+    text-align: center;
     }
-    
