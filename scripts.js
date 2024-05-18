@@ -46,6 +46,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
         yesCount++;
 
+        // Switch to Baki image when "Yes" is clicked
+        characterImage.src = 'https://www.pngall.com/wp-content/uploads/15/Baki-PNG-HD-Image.png';
+        characterImage.classList.remove('shake');  // Remove shake class if it was added
+
         if (yesCount === 3) {
             explodeHearts();
         }
@@ -56,11 +60,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
         if (noCount <= questions.length) {
             questionElement.innerText = questions[noCount - 1];
-            if (noCount === 2) {
-                characterImage.src = 'https://www.pngall.com/wp-content/uploads/14/Frieza-PNG-Cutout.png';
-                characterImage.classList.add('shake');
-            }
-        } else {
+        }
+
+        // Switch to Frieza image when "No" is clicked
+        characterImage.src = 'https://www.pngall.com/wp-content/uploads/14/Frieza-PNG-Cutout.png';
+        characterImage.classList.add('shake');
+
+        if (noCount > questions.length) {
             showScaryMessage();
         }
     }
@@ -90,4 +96,4 @@ document.addEventListener('DOMContentLoaded', () => {
         `;
     }
 });
-        
+                          
